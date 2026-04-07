@@ -1,0 +1,5 @@
+body main header ol {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
