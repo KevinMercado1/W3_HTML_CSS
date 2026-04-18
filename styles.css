@@ -7,9 +7,13 @@
 
 /* Aparado de Mi Portafolio */
 
+a:hover {
+  background-color: gold;
+}
 /* Aparado de imagenes y texto de las mascotas*/
 
 #rotw img {
+  margin-top: auto;
   height: 454px;
   width: 675px;
 }
