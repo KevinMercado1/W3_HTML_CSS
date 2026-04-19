@@ -3,11 +3,22 @@
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: #000;
 }
+a:hover {
+  background-color: gold;
+}
 
 /* Aparado de Mi Portafolio */
 
-a:hover {
-  background-color: gold;
+h1 {
+  padding: 2px;
+  text-align: center;
+}
+#project {
+  padding: relative;
+  text-align: center;
+}
+
+#about-me {
 }
 /* Aparado de imagenes y texto de las mascotas*/
 
