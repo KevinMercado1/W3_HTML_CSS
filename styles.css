@@ -1,64 +1,61 @@
-/* Apartado para diseño de  todos los archivos  */
-* {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  text-decoration: none;
-  color: black;
-}
 /* Apartado de cursor subrayado */
 a:hover {
   background-color: gold;
 }
 
 /* Aparado de Mi Portafolio */
-button a {
-  color: white;
-  padding: 10px 15px;
-  border-radius: 50px;
-  border-top: 40px;
-  background-color: black;
-  position: absolute;
-  top: 10px;
-  right: 10px;
+
+header {
+  font-family: monospace;
+  background-color: whitesmoke;
 }
 .header-main h1 {
-  margin-top: 0%;
-  background-color: antiquewhite;
-  text-align: center;
+  font-style: italic;
+  background-color: beige;
+  text-align: left;
 }
 
-#about-me {
-  background-color: beige;
+.item ul {
+  text-decoration: none;
+  justify-content: space-around;
+  margin-inline-start: 3%;
+  align-items: center;
+  display: flex;
+}
+
+#about-me h2 {
   text-align: center;
+  padding: 4%;
+  background-color: blue;
 }
 
 #about-me p {
-  font-weight: bold;
-  flex: cotent;
-  font-size: small;
+  background-color: bisque;
   text-align: center;
-}
-footer {
-  justify-content: center;
-  background-color: aquamarine;
-  display: flex;
-  margin-top: 50%;
-  text-align: center;
-  padding-top: 30px;
-}
-/* Aparado de imagenes y texto de las mascotas*/
-/* 
-.mascota img {
-  height: 454px;
-  width: 675px;
 }
 
-.raza-de-perros {
-  width: 200px;
-  padding: 10px;
-  border: 1 solid #000;
-  height: 454px;
-  width: 675px;
+.project h2 {
+  align-items: center;
+  display: flex;
+  background-color: palevioletred;
+}
+
+.project ul {
+  display: flexbox;
+  padding: 3%;
+  justify-content: space-around;
+  margin-inline-start: 3%;
+  align-items: center;
+  display: flex;
+  background-color: brown;
+}
+
+.contact {
+  background-color: cadetblue;
+}
+
+.footer {
+  background-color: red;
+  color: white;
   text-align: center;
-  padding-top: 2rem;
-} */
+}
