@@ -1,144 +1,196 @@
-a:hover {
-  background-color: gold;
+/*Variables y Configuración Inicial */
+:root {
+  --primary-color: #2c3e50;
+  --accent-color: #gold;
+  --bg-about: #00ffff;
+  --bg-projects: #db7093;
+  --bg-contact: #5f9ea0;
+  --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --border-radius: 12px;
 }
 
-/* Aparado de Mi Portafolio */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-header {
+body {
   font-family: monospace;
-  background-color: whitesmoke;
+  line-height: 1.6;
+  color: #333;
 }
+
+/* --- HEADER Y NAVEGACIÓN --- */
+header {
+  background-color: whitesmoke;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
 .header-main h1 {
   font-style: italic;
-  text-align: left;
+  margin-bottom: 1rem;
 }
 
 .item ul {
-  text-decoration: none;
-  justify-content: space-around;
-  margin-inline-start: 3%;
-  align-items: center;
+  list-style: none;
   display: flex;
-}
-
-/* Seccion de Acerca de mí */
-#about-me {
-  background-color: aqua;
-}
-
-#about-me h2 {
-  text-align: center;
-  padding: 3%;
-}
-
-#about-me p {
-  padding: 3%;
-  text-align: center;
-}
-
-/* Seccion de mis proyectos. */
-#project h2 {
+  flex-wrap: wrap;
   justify-content: center;
-  display: flex;
-  background-color: palevioletred;
+  gap: 20px;
 }
 
-#project ul {
-  display: flexbox;
-  padding: 3%;
-  justify-content: space-around;
-  margin-inline-start: 3%;
-  align-items: center;
-  display: flex;
-  background-color: brown;
+.item a,
+.button-return {
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background 0.3s;
 }
 
-/* seccion de contacto */
-#contact {
-  display: flex;
-  padding-bottom: 100%;
-  display: table-row;
-  background-color: cadetblue;
+.item a:hover,
+.button-return:hover {
+  background-color: gold;
 }
 
-footer {
-  color: black;
+/* --- SECCIÓN SOBRE MÍ --- */
+#about-me {
+  background-color: var(--bg-about);
+  padding: 4rem 2rem;
   text-align: center;
 }
 
-.projects {
-  padding: 2rem;
-  border-radius: 16px;
-  box-shadow: 10px solid black;
+/* --- SECCIÓN PROYECTOS --- */
+#project {
+  padding: 4rem 1rem;
+}
+
+#project h2 {
+  background-color: var(--bg-projects);
+  color: white;
+  padding: 1rem;
   text-align: center;
+  margin-bottom: 2rem;
+  border-radius: var(--border-radius);
 }
 
 .container-project {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 3px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Apartado de Diseño de los animales */
+.projects {
+  background: white;
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  border: 1px solid #eee;
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
+.projects:hover {
+  transform: translateY(-5px);
+}
+
+/* --- SECCIÓN MASCOTAS --- */
 .color {
   background-color: skyblue;
 }
 
-.button-return {
-  
-display: inline;  
-}
-
-#pet h1 {
-  text-align: start;
-  text-align: center;
-
-}
-
-.animales img {
-  justify-content: space-around;
-  width: 275px;
-  height: 300px;
+#pet {
+  padding: 2rem;
 }
 
 .animales {
-
-  width: 80%;
-  display: flex;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 8px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 2rem;
 }
 
-.ave {
-  
-  grid-column-start: 1;
-  grid-row-start: 1;
-}
-.perro {
-  grid-column-start: 3;
-  grid-row-start: 2;
-}
-
-.marino1 {
-  grid-column-start: 5;
-  grid-row-start: 1;
+.animales article {
+  background: white;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
 }
 
-.marino2 {
-  grid-column-start: 7;
-  grid-row-start: 2;
+.animales article:hover {
+  transform: translateY(-5px);
 }
 
-.felino {
-  grid-column-start: 9;
-  grid-row-start: 1;
+.animales img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-top: 15px;
 }
 
-.reptil {
-  grid-column-start: 11;
-  grid-row-start: 2;
+.animales h3 {
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+/* --- FORMULARIO DE CONTACTO --- */
+#contact {
+  background-color: var(--bg-contact);
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 400px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+button {
+  padding: 10px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* --- FOOTER --- */
+footer {
+  padding: 2rem;
+  background: #333;
+  color: white;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .animales {
+    grid-template-columns: 1fr;
+  }
+
+  .header-main h1 {
+    font-size: 1.5rem;
+  }
 }
