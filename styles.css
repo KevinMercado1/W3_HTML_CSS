@@ -83,6 +83,20 @@ footer {
 
 /* Apartado de Diseño de los animales */
 
+button {
+  background-color: aquamarine;
+  text-decoration: none;
+}
+
+h1 {
+  text-align: start;
+  text-align: center;
+  background-color: blue;
+}
+.animales h2 {
+  background-color: aqua;
+  justify-content: center;
+}
 .animales img {
   justify-content: space-around;
   width: 275px;
